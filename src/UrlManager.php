@@ -108,7 +108,7 @@ class UrlManager extends Component
             // 不匹配规则时抛出异常
             throw new Exception(str_cover('"{pathInfo}"找不到对应的URL解析规则，不能确定路由', [
                 '{pathInfo}' => $pathInfo,
-            ]), 101000101);
+            ]), 100900101);
         } else {
             // 没有匹配的规则，直接返回pathinfo本身
             return $pathInfo;
@@ -198,7 +198,7 @@ class UrlManager extends Component
             // 不匹配规则时抛出异常
             throw new Exception(str_cover('创建URL时，路由"{route}"找不到对应的规则，请确认路由或规则是否正确', [
                 '{route}' => $route,
-            ]), 101000102);
+            ]), 100900102);
         } else {
             return $this->createUrlDefault($route, $params, $ampersand) . $anchor;
         }
