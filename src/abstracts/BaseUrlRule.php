@@ -8,7 +8,6 @@
 
 namespace Abstracts;
 
-use Helper\Base;
 use UrlManager;
 
 abstract class BaseUrlRule extends Base
