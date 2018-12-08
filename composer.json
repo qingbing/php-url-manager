@@ -19,6 +19,7 @@
     "require": {
         "qingbing/php-helper": ">=1.0, <2.0",
         "qingbing/php-config": ">=1.0, <2.0",
+        "qingbing/php-abstracts-component": ">=1.0, <2.0",
         "qingbing/php-request": ">=1.0, <2.0"
     },
     "require-dev": {
