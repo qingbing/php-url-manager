@@ -33,7 +33,7 @@ return [
     'urlSuffix' => ".shtml", // path 模式下链接的后缀名
     'showScriptName' => true, // path 创建URL访问链接时是否显示脚本名
     'appendParams' => true, // 参数是否增加在 pathInfo 后
-    'cacheInstanceString' => "\CacheFile::getInstance('cache-file');", // cache 实例的实例化字符串代码，设置为空表示不缓存规则
+    'cacheInstanceString' => "\Components\FileCache::getInstance('cache-file');", // cache 实例的实例化字符串代码，设置为空表示不缓存规则
     'caseSensitive' => "false", // 链接的地址是否区分大小写
     'urlFormat' => "path", // 路由的显示模式，get和path两种
     'throwNotMatchRule' => true, // 当无匹配的url规则时是否抛出异常

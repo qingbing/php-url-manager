@@ -2,15 +2,18 @@
 /**
  * Link         :   http://www.phpcorner.net
  * User         :   qingbing<780042175@qq.com>
- * Date         :   2018-11-19
+ * Date         :   2018-12-12
  * Version      :   1.0
  */
+
+namespace Components;
+
 
 use Abstracts\Component;
 use Abstracts\Store;
 use Helper\Exception;
 use Helper\Unit;
-use UrlManager\UrlRule;
+use UrlManagerSupports\UrlRule;
 
 class UrlManager extends Component
 {
@@ -39,7 +42,7 @@ class UrlManager extends Component
 
     /* @var Store */
     protected $cache;
-    /* @var \UrlManager\BaseUrlRule[] */
+    /* @var \Abstracts\BaseUrlRule[] */
     private $_rules = [];
     /* @var string 页面的baseUrl */
     private $_baseUrl;
@@ -90,7 +93,7 @@ class UrlManager extends Component
     public function parseUrl()
     {
         if (self::PATH_FORMAT === $this->urlFormat) {
-            $pathInfo = $this->removeUrlSuffix(\Request::httpRequest()->getPathInfo(), $this->urlSuffix);
+            $pathInfo = $this->removeUrlSuffix(Request::httpRequest()->getPathInfo(), $this->urlSuffix);
         } elseif (isset($_GET[$this->routeVar])) {
             $pathInfo = $this->removeUrlSuffix($_GET[$this->routeVar], $this->urlSuffix);
         } elseif (isset($_POST[$this->routeVar])) {
@@ -276,9 +279,9 @@ class UrlManager extends Component
     {
         if (null === $this->_baseUrl) {
             if ($this->showScriptName) {
-                $this->_baseUrl = \Request::httpRequest()->getScriptUrl();
+                $this->_baseUrl = Request::httpRequest()->getScriptUrl();
             } else {
-                $this->_baseUrl = \Request::httpRequest()->getBaseUrl();
+                $this->_baseUrl = Request::httpRequest()->getBaseUrl();
             }
         }
         return $this->_baseUrl;

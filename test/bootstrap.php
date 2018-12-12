@@ -7,8 +7,6 @@
  */
 require("../vendor/autoload.php");
 
-define('ENV', "dev");
-
 try {
     if ($_GET['c']) {
         $className = $_GET['c'];

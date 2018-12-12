@@ -23,15 +23,13 @@
         "qingbing/php-request": ">=1.0, <2.0"
     },
     "require-dev": {
-        "qingbing/php-cache-file": ">=1.0, <2.0"
+        "qingbing/php-file-cache": ">=1.0, <2.0"
     },
     "autoload": {
-        "classmap": [
-            "src/UrlManager.php"
-        ],
         "psr-4": {
             "Abstracts\\": "src/abstracts",
-            "UrlManager\\": "src/lib"
+            "UrlManagerSupports\\": "src/supports",
+            "Components\\": "src/components"
         }
     },
     "autoload-dev": {

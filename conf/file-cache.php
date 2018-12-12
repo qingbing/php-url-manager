@@ -11,8 +11,8 @@ return [
 //    'isEncrypt' => false,
 //    'isWorking' => false,
     // 文件缓存定义
-    'namespace' => 'cf',
-//    'prefix' => 'cf_',
+    'namespace' => 'pf',
+//    'prefix' => 'pf_',
 //    'suffix' => 'bat',
 //    'targetPath' => '',
 ];

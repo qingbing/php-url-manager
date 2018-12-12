@@ -8,8 +8,8 @@
 
 namespace Test;
 
+use Components\UrlManager;
 use TestCore\Tester;
-use UrlManager;
 
 class TestUrlPath extends Tester
 {

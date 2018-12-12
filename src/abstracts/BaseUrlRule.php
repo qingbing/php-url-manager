@@ -8,7 +8,7 @@
 
 namespace Abstracts;
 
-use UrlManager;
+use Components\UrlManager;
 
 abstract class BaseUrlRule extends Base
 {

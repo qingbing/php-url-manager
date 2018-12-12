@@ -8,6 +8,7 @@
 
 namespace Test;
 
+use Components\Request;
 use TestCore\Tester;
 
 class TestUrlManager extends Tester
@@ -19,7 +20,7 @@ class TestUrlManager extends Tester
     public function run()
     {
 
-        $scriptName = \Request::httpRequest()->getScriptName();
+        $scriptName = Request::httpRequest()->getScriptName();
 
         $R = [];
         array_push($R, "{$scriptName}/good/add?c=TestUrlPath");
