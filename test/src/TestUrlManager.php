@@ -42,7 +42,7 @@ class TestUrlManager extends Tester
 //        array_push($R, "{$scriptName}/admin/good/product?c=TestUrlPath");
 
         foreach ($R as $url) {
-            echo "<a href='{$url}'>{$url}</a>\n\n";
+            echo "<a href='{$url}' target='_blank'>{$url}</a><br>";
         }
 
     }
