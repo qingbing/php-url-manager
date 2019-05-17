@@ -64,8 +64,12 @@ class TestUrlPath extends Tester
 //
 //        $url = $urlManager->createUrl('admin/site/test', ['id' => 5]);
 //        var_dump($url);
-        
 
+
+        var_dump($urlManager->createUrl('//helper/default/index'));
+        var_dump($urlManager->createUrl('//helper/default/index', ['id' => 5]));
+        var_dump($urlManager->createUrl('//helper/default/index', ['id' => 5, 'code' => 'xx']));
+        var_dump($urlManager->createUrl('//helper/default/index', ['code' => 'xxx']));
 
         // 二级创建 URL
         $url = $urlManager->createUrl('site/index');

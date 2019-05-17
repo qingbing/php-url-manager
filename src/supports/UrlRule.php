@@ -157,7 +157,7 @@ class UrlRule extends BaseUrlRule
         }
         // 规定参数必须设置，否则不匹配该规则
         foreach ($this->params as $key => $value) {
-            if (!isset($this->params[$key])) {
+            if (!isset($params[$key])) {
                 return false;
             }
             $tr["<$key>"] = urlencode($params[$key]);

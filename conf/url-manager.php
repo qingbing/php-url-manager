@@ -15,12 +15,26 @@ return [
     'urlFormat' => "path", // 路由的显示模式，get和path两种
     'throwNotMatchRule' => true, // 当无匹配的url规则时是否抛出异常
     'rules' => [
-        // 两级路由
+        // 首页路由
         [
             'pattern' => '',
             'route' => 'site/index',
-//            'defaultParams' => ['area' => 'chengdu'],
-        ], [
+        ],
+        // 帮助中心 --- 开始
+        [
+            'pattern' => 'helper/<id:\d+>',
+            'route' => 'helper/default/index',
+        ],
+        [
+            'pattern' => 'helper/<code:\w+>',
+            'route' => 'helper/default/index',
+        ],
+        [
+            'pattern' => 'helper',
+            'route' => 'helper/default/index',
+        ],
+
+        [
             'pattern' => '<controller:\w+>',
             'route' => '<controller>/index',
         ], [
