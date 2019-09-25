@@ -23,7 +23,8 @@
         "qingbing/php-request": ">=1.0, <2.0"
     },
     "require-dev": {
-        "qingbing/php-file-cache": ">=1.0, <2.0"
+        "qingbing/php-file-cache": ">=1.0, <2.0",
+        "qingbing/php-debug-bootstrap": "dev-master"
     },
     "autoload": {
         "psr-4": {
@@ -34,7 +35,6 @@
     },
     "autoload-dev": {
         "psr-4": {
-            "TestCore\\": "test/core",
             "Test\\": "test/src"
         }
     }

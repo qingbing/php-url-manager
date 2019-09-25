@@ -9,7 +9,7 @@
 namespace Test;
 
 use Components\UrlManager;
-use TestCore\Tester;
+use DBootstrap\Abstracts\Tester;
 
 class TestUrlPath extends Tester
 {
